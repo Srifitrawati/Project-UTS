@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style project.css">
+    <title>UTS WEB</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <span>UTS WEB</span>
+        </div>
+        <div class="nav-right">
+            <a href="project.html">HOME</a>
+            <a href="Profil.html">PROFILE</a>
+            <a href="Layout.html">LAYOUT</a>
+            <a href="dom.html">DOM</a>
+        </div>
+    </nav>
+    <header>
+       
+    </header>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-column {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .left-column input[type="text"] {
+            border: 2px solid red;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 9px;
+            display: block;
+            width: 35%;
+        }
+
+        .left-column button {
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 9px;
+            display: block;
+            width: 28%;
+        }
+
+        .right-column {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .color-box {
+            width: 600px;
+            height: 35px;
+            margin: 0px;
+            text-align: center;
+            border: 1px solid red;
+            padding: 5px;
+            color: red;
+            cursor: pointer;
+            background-color: white; /* Latar belakang awal putih */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <input type="text" id="inputColor" placeholder="Input Text">
+            <button onclick="setListBackcolor()">Set List Backcolor</button>
+            <button onclick="addNewColorToList()">Add New Color to List</button>
+            <button onclick="addFooter()">Add Footer</button>
+        </div>
+        <div class="right-column">
+            <div class="color-box" onclick="changeBackgroundColor(this)">Merah</div>
+            <div class="color-box" onclick="changeBackgroundColor(this)">Biru</div>
+            <div class="color-box" onclick="changeBackgroundColor(this)">Kuning</div>
+            <div class="color-box" onclick="changeBackgroundColor(this)">Ungu</div>
+            <div class="color-box" onclick="changeBackgroundColor(this)">Pink</div>
+        </div>
+    </div>
+
+    <script>
+        function changeBackgroundColor(element) {
+            var inputColor = document.getElementById("inputColor").value;
+            element.style.backgroundColor = inputColor;
+        }
+
+        function addNewColorToList() {
+            var rightColumn = document.querySelector(".right-column");
+            var newColorBox = document.createElement("div");
+            newColorBox.className = "color-box";
+            newColorBox.textContent = " "; // Ganti teks sesuai kebutuhan
+            newColorBox.onclick = function() {
+                changeBackgroundColor(this);
+            };
+            rightColumn.appendChild(newColorBox);
+        }
+
+        function addFooter() {
+            var leftColumn = document.querySelector(".left-column");
+            var footer = document.createElement("div");
+            footer.textContent = "Footer Content";
+            leftColumn.appendChild(footer);
+        }
+        
+        function setListBackcolor() {
+            var inputColor = document.getElementById("inputColor").value;
+            // Ubah latar belakang seluruh kotak warna di sebelah kanan
+            var colorBoxes = document.querySelectorAll(".right-column .color-box");
+            colorBoxes.forEach(function(box) {
+                box.style.backgroundColor = inputColor;
+            });
+        }
+    </script>
+</body>
+</html>

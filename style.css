@@ -1,0 +1,230 @@
+   body{
+        margin: 0;
+        padding: 0;
+       
+    }
+    
+.header{
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    color: #000; 
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    font-size: 36px; 
+}
+.nav{
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    color: #000;
+}
+.left1,.left2,.left3,.center1,.center2,.center3,.right1,.right2 {
+    background-color: #000000;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.button-container {
+    text-align: center;
+}
+
+#right1YesButton, #right1NoButton {
+    margin: 10px;
+}
+
+#switchButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px; 
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#switchButton:hover {
+    background-color: #344bb3;
+}
+
+
+.left1-content {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
+#right1 {
+    text-align: center;
+}
+
+#right1 p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#right1 button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#right1 button:hover {
+    background-color: #0056b3;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.left1.zoomed, .left2.zoomed, .left3.zoomed,
+.center1.zoomed, .center2.zoomed, .center3.zoomed,
+.right1.zoomed, .right2.zoomed {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease-in-out; 
+    z-index: 1; 
+}
+
+
+.left1.zoomed, .center1.zoomed, .right1.zoomed {
+    background-color: lightgray; 
+}
+
+    .container{
+        position: relative;
+        text-align: center;
+        font-weight: bold;
+        top: 50%;
+        color: rgb(10, 10, 10);
+    }
+    .container .header{
+        min-height: 100px;
+        background-color: #FF00FF;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+    .container .nav{
+        height: 20px;
+        background-color:#696969;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+    .container .content{
+        grid-area: content;
+        background-color: rgb(16, 59, 139);
+        display: flex;
+        height: 500px;
+        display: grid;
+        grid-template-areas: 'cel1 cel2 cel3';
+        
+    }
+    .container .content .cel1{
+        background-color: rgb(231, 22, 92);
+        grid-area: cel1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+    .content .cel1 .left1{
+        background-color: rgb(109, 59, 133);
+        width: 70%;
+        height: 80px;
+    }
+    .content .cel1 .left2{
+        width: 70%;
+        background-color: rgb(57, 221, 158);
+        height: 80px;
+        text-align: center;
+    }
+    .content .cel1 .left3{
+        width: 70%;
+        background-color: rgb(103, 218, 109);
+        height: 80px;
+        text-align: center;
+    }
+    .container .content .cel2{
+        background-color: rgb(114, 56, 138);
+        grid-area: cel2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+    .content .cel2 .center1{
+        background-color: rgb(158, 55, 55);
+        width: 70%;
+        height: 80px;
+        animation: pulse 1s ease infinite;
+    }
+    .content .cel2 .center2{
+        width: 70%;
+        background-color: rgb(92, 100, 205);
+        height: 80px;
+        text-align: center;
+        animation: pulse 1s ease infinite;
+    }
+    .content .cel2 .center3{
+        width: 70%;
+        background-color: rgb(107, 64, 64);
+        height: 80px;
+        text-align: center;
+        animation: pulse 1s ease infinite;
+    }
+    .container .content .cel3{
+        background-color: rgb(235, 235, 136);
+        grid-area: cel3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+    .content .cel3 .right1{
+        width: 70%;
+        background-color: rgb(94, 218, 77);
+        height: 80px;
+        text-align: center;
+    }
+    .content .cel3 .right2{
+        width: 70%;
+        background-color: rgb(89, 207, 142);
+        height: 80px;
+        text-align: center;
+    }
+    .container .footer{
+        background-color: black;
+        height: 70px;
+        color: aliceblue;
+    }
+    

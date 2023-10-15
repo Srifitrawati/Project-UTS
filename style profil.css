@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #778899;
+    border: 10px solid #2f2e3d;
+    box-sizing: border-box;
+    
+  }
+  nav {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-left {
+    font-weight: bold;
+}
+
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+header {
+    /* Tambahkan gambar atau warna sesuai kebutuhan */
+    height: 150px;
+    background-color: deeppink;
+    margin: 0;
+    padding: 0;
+}
+  img {
+    float: left;
+    max-width: 115px;
+    height: auto;
+    border-radius: 1;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    
+  }
+  table {
+    width: 85%;
+    border: 5px solid black;
+    margin-top: 20px;
+    margin: 0 auto;
+  }
+  th, td {
+    background-color: #fff2bc;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #363634;
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+.jadwal1 {
+
+    color: fuchsia;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #C0C0C0;
+    border-radius: 50px;
+
+
+}
+.biodata{
+    background-color: #C0C0C0;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    border-radius: 50px;
+    font-size: medium;
+    color: black;
+}
+nav{
+    background-color:#778899;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul{
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+    display: inline-table;
+}
+.navigasi ul{
+    list-style: none;
+    background-color: #F0FFF0;
+    padding : 0px 25px;
+    position :relative;
+    display :inline-table ;
+    border-radius: 50px;
+}
+.navigasi ul li{
+    float: left;
+}
+.navigasi ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: black;
+    font-size: 14pt;
+}
+.navigasi ul li:hover{
+    background-color: #F5F5F5;
+}
+.navigasi ul li a:hover{
+    color: rgb(230, 148, 48);
+}
